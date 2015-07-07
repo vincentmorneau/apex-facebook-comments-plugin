@@ -90,18 +90,34 @@ wwv_flow_api.create_plugin(
 ,p_version_identifier=>'2.0'
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(8942609415976243961)
+ p_id=>wwv_flow_api.id(8942816315073512567)
 ,p_plugin_id=>wwv_flow_api.id(8941874312557712256)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
 ,p_prompt=>'Color Scheme'
-,p_attribute_type=>'TEXT'
+,p_attribute_type=>'SELECT LIST'
 ,p_is_required=>true
 ,p_default_value=>'light'
 ,p_supported_ui_types=>'DESKTOP:JQM_SMARTPHONE'
 ,p_is_translatable=>false
-,p_help_text=>'The color scheme used by the plugin. Can be "light" or "dark".'
+,p_lov_type=>'STATIC'
+);
+wwv_flow_api.create_plugin_attr_value(
+ p_id=>wwv_flow_api.id(8942817721257513794)
+,p_plugin_attribute_id=>wwv_flow_api.id(8942816315073512567)
+,p_display_sequence=>10
+,p_display_value=>'light'
+,p_return_value=>'light'
+,p_is_quick_pick=>true
+);
+wwv_flow_api.create_plugin_attr_value(
+ p_id=>wwv_flow_api.id(8942828353963515139)
+,p_plugin_attribute_id=>wwv_flow_api.id(8942816315073512567)
+,p_display_sequence=>20
+,p_display_value=>'dark'
+,p_return_value=>'dark'
+,p_is_quick_pick=>true
 );
 wwv_flow_api.create_plugin_attribute(
  p_id=>wwv_flow_api.id(8942611073998250162)
@@ -118,17 +134,42 @@ wwv_flow_api.create_plugin_attribute(
 ,p_help_text=>'The number of comments to show by default. The minimum value is 1.'
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(8942611903249254008)
+ p_id=>wwv_flow_api.id(8942830627227528302)
 ,p_plugin_id=>wwv_flow_api.id(8941874312557712256)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
-,p_prompt=>'Order when displaying comments'
-,p_attribute_type=>'TEXT'
-,p_is_required=>false
+,p_prompt=>'Sort by'
+,p_attribute_type=>'SELECT LIST'
+,p_is_required=>true
 ,p_default_value=>'social'
+,p_supported_ui_types=>'DESKTOP:JQM_SMARTPHONE'
 ,p_is_translatable=>false
-,p_help_text=>'The order to use when displaying comments. Can be "social", "reverse_time", or "time". The different order types are explained in the FAQ'
+,p_lov_type=>'STATIC'
+);
+wwv_flow_api.create_plugin_attr_value(
+ p_id=>wwv_flow_api.id(8942831666280529316)
+,p_plugin_attribute_id=>wwv_flow_api.id(8942830627227528302)
+,p_display_sequence=>10
+,p_display_value=>'Top'
+,p_return_value=>'social'
+,p_is_quick_pick=>true
+);
+wwv_flow_api.create_plugin_attr_value(
+ p_id=>wwv_flow_api.id(8942832264321531805)
+,p_plugin_attribute_id=>wwv_flow_api.id(8942830627227528302)
+,p_display_sequence=>20
+,p_display_value=>'Oldest'
+,p_return_value=>'time'
+,p_is_quick_pick=>true
+);
+wwv_flow_api.create_plugin_attr_value(
+ p_id=>wwv_flow_api.id(8942832880438533237)
+,p_plugin_attribute_id=>wwv_flow_api.id(8942830627227528302)
+,p_display_sequence=>30
+,p_display_value=>'Newest'
+,p_return_value=>'reverse_time'
+,p_is_quick_pick=>true
 );
 wwv_flow_api.create_plugin_attribute(
  p_id=>wwv_flow_api.id(8942612928279257144)
