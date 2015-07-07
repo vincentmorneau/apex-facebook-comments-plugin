@@ -1,7 +1,7 @@
 #APEX Facebook Comments Plugin
 Add comments to your application with the Facebook API.
 
-Demo: https://apex.oracle.com/pls/apex/f?p=96962:
+Demo: https://apex.oracle.com/pls/apex/f?p=96962:  
 Source: https://github.com/vincentmorneau/apex-facebook-comments-plugin
 
 ##Changelog
